@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,13 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Student;
 import com.example.demo.service.IStudentService;
-import com.example.demo.service.implement.StudentServiceImpl;
+
 
 @RestController
 @RequestMapping("api/students")
 public class StudentCtrl {
 
-	IStudentService service = new StudentServiceImpl();
+	@Autowired
+	IStudentService service;
 
 	@GetMapping("")
 	public List<Student> findAll() {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.example.demo.entity.Address;
 import com.example.demo.entity.Student;
 
 public class Data {
@@ -19,10 +20,10 @@ public class Data {
 
 	public Data() {
 		students = new ArrayList<>();
-		students.add( new Student(0, "Nien"));
-		students.add( new Student(1, "Quan"));
-		students.add( new Student(2, "Sy"));
-		students.add( new Student(3, "Sy2"));
+		students.add( new Student(0, "Nien", new Address("Vietnam", "HCM", "ThuDuc")));
+		students.add( new Student(1, "Quan", new Address("Vietnam", "HCM", "ThuDuc")));
+		students.add( new Student(2, "Sy", new Address("Vietnam", "HCM", "ThuDuc")));
+		students.add( new Student(3, "Sy2", new Address("Vietnam", "HCM", "ThuDuc")));
 	}
 	
 	

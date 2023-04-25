@@ -5,12 +5,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.example.demo.Data;
 import com.example.demo.entity.Student;
 import com.example.demo.exception.InternalServerErrorException;
 
-
+@Repository
 public class IStudentRepository  {
 	Data data = new Data();
 	
@@ -29,7 +31,7 @@ public class IStudentRepository  {
 	}
 	
 	@Autowired
-	MessageSource messageSource;
+	MessageSource messageSource ;
 	public List<Student> createStudent(Student student) throws Exception {
 		student.setId(data.getStudents().size()+1);
 		
