@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Student;
-import com.example.demo.repository.IStudentRepository;
+import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.IStudentService;
 
 @Service
 public class StudentServiceImpl implements IStudentService {
 	
 	@Autowired
-	IStudentRepository iStudentRepository ;
+	StudentRepository iStudentRepository ;
 	
 	@Override
 	public List<Student> getStudents() {
@@ -32,5 +32,19 @@ public class StudentServiceImpl implements IStudentService {
 	public List<Student> createStudent(Student student) throws Exception {
 		// TODO Auto-generated method stub
 		return iStudentRepository.createStudent(student);
+	}
+
+
+	@Override
+	public Student updateStudentbyId(long id, Student student) {
+		// TODO Auto-generated method stub
+		return iStudentRepository.updateStudentbyId(id, student);
+	}
+
+
+	@Override
+	public List<Student> deleteStudentById(long id) {
+		// TODO Auto-generated method stub
+		return iStudentRepository.deleteStudentById(id);
 	}
 }

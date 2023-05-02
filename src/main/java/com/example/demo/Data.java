@@ -1,12 +1,15 @@
 package com.example.demo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 import com.example.demo.entity.Address;
 import com.example.demo.entity.Student;
 
+
+@Component
 public class Data {
 	List<Student> students;
 
@@ -18,6 +21,7 @@ public class Data {
 		this.students = students;
 	}
 
+	
 	public Data() {
 		students = new ArrayList<>();
 		students.add( new Student(0, "Nien", new Address("Vietnam", "HCM", "ThuDuc")));

@@ -42,13 +42,19 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>3.0.5</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+<dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId>
+    <version>2.15.0</version>
+</dependency>
+
 
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>jstl</artifactId>
-    <version>1.2</version>
 </dependency>
 	</dependencies>
 
